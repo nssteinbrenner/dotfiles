@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+
+clean=false
+message=''
+branch=''
+
+while getopts 'cm:b:' flag; do
+    case "${flag}" in
+        c) clean=true ;;
+        m) message="${OPTARG}" ;;
+        b) branch="${OPTARG}" ;;
+    esac
+done
+
+if [[ $clean ]]; then
+    git fetch
+    git switch -C master
+fi
+
+if [[ -z $branch ]]; then
+    git switch -c $(date +%F-%s)
+else
+    git switch $branch
+    if [[ $? -ne 0 ]]; then
+        git switch -c $branch
+    fi
+fi
+
+# Sync home directory
+rsync -avz \
+    $HOME/{bin,.zshrc,.p10k.zsh} \
+    $HOME/repositories/github.com/nssteinbrenner/dotfiles
+
+# Sync .config
+rsync -avz \
+    $HOME/.config/{nvim,foot,tmux,sway} \
+    $HOME/repositories/github.com/nssteinbrenner/dotfiles/.config
+
+git add -A
+
+if [[ -z $message ]]; then
+    message="Update dotfiles"
+fi
+
+git commit -m "$(date +%F) - ${message}"
+git push

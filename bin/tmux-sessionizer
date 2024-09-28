@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+print_with_newline () {
+ printf '%s\n' "$1"
+}
+
+# Directory structure is ~/repositories/$site/$user
+# e.g ~/repositories/github.com/nssteinbrenner
+results=$(find ~/repositories -mindepth 3 -maxdepth 3 -type d)
+
+if [[ $# -eq 1 ]]; then
+    selected=$(print_with_newline "$results" | grep "$1")
+    number_of_results=$(print_with_newline "$selected" | wc -l)
+    if [[ $number_of_results -gt 1 ]]; then
+        selected=$(print_with_newline "$selected" | fzf)
+    elif [[ $number_of_results -lt 1 ]]; then
+        echo "Directory not found"
+        exit 1
+    fi
+else
+    selected=$(print_with_newline "$results" | fzf)
+fi
+
+if [[ -z $selected ]]; then
+    exit 0
+fi
+
+selected_name=$(basename "$selected" | tr . _)
+tmux_running=$(pgrep tmux)
+
+if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+    tmux new-session -s $selected_name -c $selected
+    exit 0
+fi
+
+if ! tmux has-session -t=$selected_name 2> /dev/null; then
+    tmux new-session -ds $selected_name -c $selected
+fi
+
+tmux switch-client -t $selected_name
