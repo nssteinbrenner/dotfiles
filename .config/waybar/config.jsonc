@@ -1,0 +1,47 @@
+{
+    "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 24, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 1, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": ["sway/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "memory", "pulseaudio", "network",],
+    // Modules configuration
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+     },
+
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        "format": " {:%I:%M %p   %Y-%m-%d}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "on-click": ""
+    },
+    "cpu": {
+        "format": " {usage}%",
+    },
+    "memory": {
+        "format": " {}%",
+    },
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": " {ipaddr}/{cidr}",
+        "tooltip-format": "{ipaddr}\r{gwaddr} ",
+        "format-linked": " {ifname} (No IP)",
+        "format-disconnected": "⚠ Disconnected",
+    },
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "󰝟  {volume}%",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+    }
+}

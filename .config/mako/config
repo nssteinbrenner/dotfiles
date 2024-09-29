@@ -1,0 +1,113 @@
+#####################
+# General settings #
+#####################
+font=undefined medium 14, MesloLGS Nerd Font 14
+default-timeout=5000
+icons=1
+ignore-timeout=1
+layer=overlay
+sort=-time
+#####################
+#       Style       #
+#####################
+border-radius=4
+max-history=20
+max-icon-size=64
+border-size=1
+width=300
+height=175
+padding=10
+
+##################
+#   Colors       #
+##################
+background-color=#1c1e1f
+text-color=#BDAE93
+border-color=#282b2c
+
+##################
+# Urgency levels #
+##################
+#[urgency=low]
+#background-color=#1d2021
+#text-color=#BDAE93
+#border-color=#282b2c
+
+#[urgency=normal]
+#background-color=#1D2021
+#text-color=#BDAE93
+#border-color=#282b2c
+
+[urgency=high]
+background-color=#1c1e1f
+border-color=#CC241D
+text-color=#FABD2F
+default-timeout=0
+
+###############################
+## Custom notification rules ##
+###############################
+[app-name=vol_notify]
+font=undefined medium 14, MesloLGS Nerd Font 14
+width=100
+anchor=top-right
+group-by=app-name
+default-timeout=1500
+text-alignment=center
+
+[app-name=sysnfo_notify]
+font=undefined medium 14, MesloLGS Nerd Font 14
+width=200
+anchor=top-right
+group-by=app-name
+default-timeout=8000
+
+[app-name=sysnfo_notify-l]
+font=undefined medium 14, MesloLGS Nerd Font 14
+width=260
+anchor=top-right
+group-by=app-name
+default-timeout=4000
+text-alignment=center
+
+[app-name=fat_notify]
+font=undefined medium 14, MesloLGS Nerd Font 14
+height=800
+anchor=top-right
+group-by=app-name
+default-timeout=8000
+
+[app-name=date_notify]
+font=undefined medium 14, MesloLGS Nerd Font 14
+width=160
+anchor=top-right
+group-by=app-name
+default-timeout=4000
+text-alignment=center
+
+[app-name=cal_notify]
+font=JetBrains Mono 10
+width=190
+height=250
+anchor=top-right
+group-by=app-name
+default-timeout=8000
+
+[app-name=weather_notify]
+font=undefined medium 14, MesloLGS Nerd Font 14
+width=230
+anchor=top-right
+group-by=app-name
+default-timeout=8000
+padding=20
+
+[app-name=idle_notify]
+font=undefined medium 14, MesloLGS Nerd Font 14
+width=260
+anchor=top-right
+group-by=app-name
+default-timeout=8000
+text-alignment=center
+
+[mode=dnd]
+invisible=1

@@ -33,7 +33,7 @@ rsync -avz --delete\
 
 # Sync .config
 rsync -avz --delete \
-    $HOME/.config/{nvim,foot,tmux,sway,tmux-sessionizer} \
+    $HOME/.config/{mako,nvim,fontconfig,foot,fuzzel,fzf,sway,tmux,tmux-sessionizer,waybar} \
     $HOME/repositories/github.com/nssteinbrenner/dotfiles/.config
 
 git add -A

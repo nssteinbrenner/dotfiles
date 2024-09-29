@@ -1,4 +1,4 @@
-local vim_dir = os.getenv("HOME") .. "/.vim"
+local vim_dir = os.getenv("HOME") .. "/.nvim"
 
 vim.opt.writebackup = true
 vim.opt.backup = true
