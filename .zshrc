@@ -11,7 +11,8 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 export EDITOR=nvim
 export VISUAL=nvim
-export PATH="$PATH:/home/rockrock/bin"
+export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
+export PATH="$PATH:$HOME/go/bin:$HOME/bin"
 
 alias ls="ls --color=auto"
 alias dir="dir --color=auto"

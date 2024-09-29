@@ -27,13 +27,13 @@ else
 fi
 
 # Sync home directory
-rsync -avz \
+rsync -avz --delete\
     $HOME/{bin,.zshrc,.p10k.zsh} \
     $HOME/repositories/github.com/nssteinbrenner/dotfiles
 
 # Sync .config
-rsync -avz \
-    $HOME/.config/{nvim,foot,tmux,sway} \
+rsync -avz --delete \
+    $HOME/.config/{nvim,foot,tmux,sway,tmux-sessionizer} \
     $HOME/repositories/github.com/nssteinbrenner/dotfiles/.config
 
 git add -A

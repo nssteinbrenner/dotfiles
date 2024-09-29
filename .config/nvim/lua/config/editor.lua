@@ -28,3 +28,14 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*",
     command = "%s/\\s\\+$//e | %s#\\($\\n\\s*\\)\\+\\%$##e"
 })
+
+-- Reopen at last cursor line and center of screen
+vim.api.nvim_create_autocmd("BufReadPost", {
+    pattern ="*",
+    callback = function ()
+        local line = vim.fn.line("'\"")
+        if line > 0 and line <= vim.fn.line("$") then
+            vim.cmd "normal! g`\""
+	end
+    end
+})
