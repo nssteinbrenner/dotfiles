@@ -11,7 +11,7 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 export EDITOR=nvim
 export VISUAL=nvim
-export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
+export FZF_DEFAULT_OPTS_FILE="${HOME}/.config/fzf/fzf-opts"
 export PATH="$PATH:$HOME/go/bin:$HOME/bin"
 
 alias ls="ls --color=auto"

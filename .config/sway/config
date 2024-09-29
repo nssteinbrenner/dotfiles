@@ -4,6 +4,18 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+font pango: undefined medium 12
+
+# Center window title
+title_align center
+
+# Disable window borders
+default_border pixel 1
+
+# Set inner/outer gaps
+gaps inner 5
+gaps outer 0
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -16,13 +28,18 @@ set $right l
 # Your preferred terminal emulator
 set $term foot
 # Your preferred application launcher
-set $menu fuzzel
+set $menu fuzzel | xargs swaymsg exec --
+# Notifications
+exec mako
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output DP-4 pos 0 0 
+# DP-2 = main
+# DP-4 = side
+output DP-2 bg ~/.config/sway/wallpapers/1600p/焦茶-anime-girls-balloon-long-hair-wallpaper-9fec06277f23c6015cb372077db687bb.jpg center
+output DP-4 bg ~/.config/sway/wallpapers/1700p/焦茶-paper-planes-anime-girls-long-hair-wallpaper-a12240bf1b32175e449c11fb196e025c.jpg center
+output DP-4 pos 0 0
 output DP-2 pos 2560 0
 output DP-4 mode 2560x1440@144hz
 output DP-2 mode 2560x1440@360hz
@@ -67,7 +84,7 @@ workspace 2 output DP-4
 
 input "5426:158:Razer_Viper_Mini_Signature_Edition" {
     accel_profile "flat"
-    pointer_accel 0.1
+    pointer_accel 0
 }
 
 ### Key bindings
@@ -240,19 +257,5 @@ bar {
     }
 }
 
-# Colors
-##########
-# Colors #
-##########
-set $bg      #282828
-set $bg2     #504945
-set $bg3     #665c54
-set $fg      #ebdbb2
-set $red     #cc241d
-set $blue    #458588
-set $purple  #b16286
-
-set $black   #000000
-set $white   #ffffff
-
+include ~/.config/sway/theme/gruvbox.conf
 include /etc/sway/config.d/*
