@@ -22,7 +22,7 @@
     "clock": {
         "format": " {:%I:%M %p   %Y-%m-%d}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "on-click": ""
+        "on-click": "",
     },
     "cpu": {
         "format": " {usage}%",

@@ -16,6 +16,8 @@ default_border pixel 1
 gaps inner 5
 gaps outer 0
 
+focus_follows_mouse no
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
