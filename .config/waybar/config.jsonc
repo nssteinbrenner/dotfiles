@@ -17,7 +17,7 @@
 
     "tray": {
         // "icon-size": 21,
-        "spacing": 100
+        "spacing": 10
     },
     "clock": {
         "format": " {:%I:%M %p   %Y-%m-%d}",
