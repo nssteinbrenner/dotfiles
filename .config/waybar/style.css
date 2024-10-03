@@ -1,11 +1,43 @@
+@define-color bg_h #1d2021;
+@define-color bg #282828;
+@define-color bg_s #32302f;
+@define-color bg1 #3c3836;
+@define-color bg2 #504945;
+@define-color bg3 #665c54;
+@define-color bg4 #7c6f64;
+
+@define-color fg #fbf1c7;
+@define-color fg1 #ebdbb2;
+@define-color fg2 #d5c4a1;
+@define-color fg3 #bdae93;
+@define-color fg4 #a89984;
+
+@define-color red #fb4934;
+@define-color green #b8bb26;
+@define-color yellow #fabd2f;
+@define-color blue #83a598;
+@define-color purple #d3869b;
+@define-color aqua #8ec07c;
+@define-color gray #928374;
+@define-color orange #fe8019;
+
+@define-color red_dim #cc2412;
+@define-color green_dim #98971a;
+@define-color yellow_dim #d79921;
+@define-color blue_dim #458588;
+@define-color purple_dim #b16286;
+@define-color aqua_dim #689d6a;
+@define-color gray_dim #a89984;
+@define-color orange_dim #d65d0e;
+
 * {
+    background-color: @bg_h;
     font-family: 'undefined medium', 'MesloLGS Nerd Font';
     font-size: 14px;
 }
 
 window#waybar {
-    background-color: #282828;
-    border-bottom: 2px solid #282828;
+    border-bottom: 2px solid #1d2021;
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -69,6 +101,7 @@ button:hover {
 #mode,
 #idle_inhibitor,
 #scratchpad,
+#weather,
 #mpd {
     padding: 0 10px;
     color: #EBDBB2;
@@ -89,41 +122,7 @@ button:hover {
     margin-right: 0;
 }
 
-#clock {
-    background-color: #282828;
-}
-
-label:focus {
-    background-color: #000000;
-}
-
-#cpu {
-    background-color: #282828;
-}
-
-#memory {
-    background-color: #282828;
-}
-
-#disk {
-    background-color: #282828;
-}
-
-#network {
-    background-color: #282828;
-}
-
-#network.disconnected {
-    background-color: #282828;
-}
-
-#pulseaudio {
-    background-color: #282828;
-    color: #EBDBB2;
-}
-
 #pulseaudio.muted {
-    background-color: #282828;
     color: #2a5c45;
 }
 
@@ -134,3 +133,11 @@ label:focus {
 #temperature.critical {
     background-color: #eb4d4b;
 }
+
+#custom-fitzroy {
+    color: #EBDBB2;
+}
+
+/*tooltip label {
+    color: #EBDBB2;
+}*/

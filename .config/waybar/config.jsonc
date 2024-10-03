@@ -6,7 +6,7 @@
     "spacing": 1, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["sway/workspaces"],
-    "modules-center": ["clock"],
+    "modules-center": ["custom/fitzroy", "clock"],
     "modules-right": ["cpu", "memory", "pulseaudio", "network",],
     // Modules configuration
     "sway/workspaces": {
@@ -17,7 +17,7 @@
 
     "tray": {
         // "icon-size": 21,
-        "spacing": 10
+        "spacing": 100
     },
     "clock": {
         "format": " {:%I:%M %p   %Y-%m-%d}",
@@ -32,9 +32,9 @@
     },
     "network": {
         "format-wifi": "",
-        "format-ethernet": " {ipaddr}/{cidr}",
-        "tooltip-format": "{ipaddr}\r{gwaddr} ",
-        "format-linked": " {ifname} (No IP)",
+        "format-ethernet": "󰈀 {ipaddr}/{cidr}",
+        "tooltip-format": "{ipaddr}\r{gwaddr} 󰈀1",
+        "format-linked": "󰈀 {ifname} (No IP)",
         "format-disconnected": "⚠ Disconnected",
     },
     "pulseaudio": {
@@ -43,5 +43,10 @@
         "format-icons": {
             "default": ["", "", ""]
         },
+    },
+    "custom/fitzroy": {
+        "exec": "~/bin/fitzroy",
+        "interval": 600,
+        "return-type": "json",
     }
 }
