@@ -45,8 +45,8 @@
         },
     },
     "custom/fitzroy": {
-        "exec": "~/bin/fitzroy",
-        "interval": 600,
+        "exec": "${HOME}/bin/network-wait-wrapper google.com ${HOME}/bin/fitzroy",
+        "interval": 60,
         "return-type": "json",
     }
 }

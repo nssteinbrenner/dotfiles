@@ -37,19 +37,19 @@ exec mako
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-# DP-2 = main
-# DP-4 = side
-output DP-2 bg ~/.config/sway/wallpapers/1600p/焦茶-anime-girls-balloon-long-hair-wallpaper-9fec06277f23c6015cb372077db687bb.jpg center
-output DP-4 bg ~/.config/sway/wallpapers/1700p/焦茶-paper-planes-anime-girls-long-hair-wallpaper-a12240bf1b32175e449c11fb196e025c.jpg center
-output DP-4 pos 0 0
-output DP-2 pos 2560 0
-output DP-4 mode 2560x1440@144hz
-output DP-2 mode 2560x1440@360hz
-output DP-4 adaptive_sync on
-output DP-2 adaptive_sync on
+# "Dell Inc. AW2725DF 9B92ZZ3" = main
+# "LG Electronics LG ULTRAGEAR 106NTEP31236" = side
+output "Dell Inc. AW2725DF 9B92ZZ3" bg ~/.config/sway/wallpapers/1600p/焦茶-anime-girls-balloon-long-hair-wallpaper-9fec06277f23c6015cb372077db687bb.jpg center
+output "LG Electronics LG ULTRAGEAR 106NTEP31236" bg ~/.config/sway/wallpapers/1700p/焦茶-paper-planes-anime-girls-long-hair-wallpaper-a12240bf1b32175e449c11fb196e025c.jpg center
+output "LG Electronics LG ULTRAGEAR 106NTEP31236" pos 0 0
+output "Dell Inc. AW2725DF 9B92ZZ3" pos 2560 0
+output "LG Electronics LG ULTRAGEAR 106NTEP31236" mode 2560x1440@144hz
+output "Dell Inc. AW2725DF 9B92ZZ3" mode 2560x1440@360hz
+output "LG Electronics LG ULTRAGEAR 106NTEP31236" adaptive_sync on
+output "Dell Inc. AW2725DF 9B92ZZ3" adaptive_sync on
 
-workspace 1 output DP-2
-workspace 2 output DP-4
+workspace 1 output "Dell Inc. AW2725DF 9B92ZZ3"
+workspace 2 output "LG Electronics LG ULTRAGEAR 106NTEP31236"
 #
 # Example configuration:
 #
