@@ -103,7 +103,7 @@ return {
         vim.api.nvim_create_autocmd("BufWritePre", {
             buffer = buffer,
             callback = function()
-                if vim.fn.expand("%") == "*.go" then
+                if string.match(vim.fn.expand("%"), "%.go$") then
                     return
                 end
                 vim.lsp.buf.format { async = false }
