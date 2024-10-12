@@ -2,7 +2,6 @@
 
 clean=false
 message=''
-branch=''
 
 while getopts 'm:' flag; do
     case "${flag}" in

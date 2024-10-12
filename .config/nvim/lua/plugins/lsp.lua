@@ -33,6 +33,7 @@ return {
                 "jedi_language_server",
                 "lua_ls",
                 "rust_analyzer",
+                "terraformls",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
@@ -102,12 +103,9 @@ return {
         vim.api.nvim_create_autocmd("BufWritePre", {
             buffer = buffer,
             callback = function()
-                if vim.fn.expand("%") ~= "*.go" then
+                if vim.fn.expand("%") == "*.go" then
                     return
                 end
-                --[[ if vim.bo.filetype ~= "go" then
-                    return
-                end ]]
                 vim.lsp.buf.format { async = false }
             end
         })
