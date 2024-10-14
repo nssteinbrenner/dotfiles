@@ -22,7 +22,7 @@ rsync -avz --delete \
 
 rsync -avz --delete\
     $HOME/.local/bin/ \
-    $HOME/repositories/github.com/nssteinbrenner/dotfiles/.local
+    $HOME/repositories/github.com/nssteinbrenner/dotfiles/.local/bin/
 
 git add -A
 
