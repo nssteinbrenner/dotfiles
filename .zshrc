@@ -14,7 +14,7 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 export EDITOR=nvim
 export VISUAL=nvim
 export FZF_DEFAULT_OPTS_FILE="${HOME}/.config/fzf/fzf-opts"
-export PATH="$PATH:$HOME/go/bin:$HOME/bin"
+export PATH="$PATH:$HOME/go/bin:$HOME/bin:$HOME/.local/bin"
 
 alias ls="ls --color=auto"
 alias dir="dir --color=auto"

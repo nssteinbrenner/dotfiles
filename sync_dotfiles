@@ -12,15 +12,17 @@ done
 git fetch
 git switch -C master
 
-# Sync home directory
 rsync -avz --delete\
-    $HOME/{bin,.zshrc,.p10k.zsh} \
+    $HOME/{.zshrc,.p10k.zsh,.gruvbox_p10k.zsh} \
     $HOME/repositories/github.com/nssteinbrenner/dotfiles
 
-# Sync .config
 rsync -avz --delete \
     $HOME/.config/{mako,nvim,fontconfig,foot,fuzzel,fzf,sway,tmux,tmux-sessionizer,waybar} \
     $HOME/repositories/github.com/nssteinbrenner/dotfiles/.config
+
+rsync -avz --delete\
+    $HOME/.local/{bin} \
+    $HOME/repositories/github.com/nssteinbrenner/dotfiles/.local
 
 git add -A
 

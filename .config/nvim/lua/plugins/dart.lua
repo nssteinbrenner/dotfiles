@@ -1,9 +1,13 @@
 return {
     "nssteinbrenner/dart",
     branch = "master",
+    tag = "v1.0.0",
+    dependencies = {
+        { "nvim-lua/plenary.nvim" },
+    },
 
     config = function()
-        local dart = require("dart")
+        local dart = require("dart").setup()
 
         vim.keymap.set("n", "<A-a>", function() dart:list():add() end)
         vim.keymap.set("n", "<A-e>", function() dart.ui:toggle_quick_menu(dart:list()) end)
