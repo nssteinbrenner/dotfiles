@@ -21,6 +21,7 @@ alias dir="dir --color=auto"
 alias grep="grep --color=auto"
 alias sway="sway --unsupported-gpu"
 alias tms="tmux-sessionizer"
+alias vim="nvim"
 
 bindkey -e
 
