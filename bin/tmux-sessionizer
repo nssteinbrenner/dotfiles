@@ -74,8 +74,8 @@ Command line flags:
                             PATH,MINDEPTH,MAXDEPTH
                         PATH is required. MINDEPTH and MAXDEPTH both default to 1.
                         For example, if you run the command with the flag:
-                            -d "${HOME}/repositories,3,3" -d "${HOME}/workspaces,2,3"
-                        It will search ${HOME}/repositories with a mindepth and maxdepth of 3.
+                            -d "${HOME}/git,3,3" -d "${HOME}/workspaces,2,3"
+                        It will search ${HOME}/git with a mindepth and maxdepth of 3.
                         ${HOME}/workspaces will be searched with a mindepth of 2 and maxdepth of
                         3.
     -h|--help           Print this menu and exit.
