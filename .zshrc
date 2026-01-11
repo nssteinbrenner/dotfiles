@@ -14,6 +14,7 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 export EDITOR=nvim
 export VISUAL=nvim
 export FZF_DEFAULT_OPTS_FILE="${HOME}/.config/fzf/fzf-opts"
+export GHQ_ROOT="${HOME}/git"
 export PATH="$PATH:$HOME/go/bin:$HOME/bin:$HOME/.local/bin"
 
 alias ls="ls --color=auto"
@@ -27,7 +28,7 @@ bindkey -e
 
 setopt INTERACTIVE_COMMENTS
 
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
